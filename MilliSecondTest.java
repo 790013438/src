@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.time.Clock;
 
 public class MilliSecondTest {
 
@@ -6,6 +7,7 @@ public class MilliSecondTest {
 
         System.out.println(Calendar.getInstance().getTimeInMillis());
         System.out.println(System.currentTimeMillis());
+        System.out.println(Clock.systemDefaultZone().millis());
 
     }
 
