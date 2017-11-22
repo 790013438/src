@@ -1,4 +1,6 @@
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateFormatTest {
@@ -8,5 +10,9 @@ public class DateFormatTest {
         Date date1 = new Date();
         System.out.println(oldFormatter.format(date1));
 
+        //Java 8
+        DateTimeFormatter newFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDate date2 = LocalDate.now();
+        System.out.println(date2.format(newFormatter));
     }
 }
