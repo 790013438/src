@@ -18,6 +18,12 @@ class B extends A implements C {
     /**
      * rewrite interface, class
      * 重写了两个的方法，interface的方法，class的方法都重写了
+     * 不能比子类声明更多的方法
      */
     public void foo(int a) {}
+
+    /**
+     * overload 重载方法
+     */
+    public void foo() throws Exception {}
 }
