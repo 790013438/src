@@ -23,7 +23,13 @@ class B extends A implements C {
     public void foo(int a) {}
 
     /**
-     * overload 重载方法
+     * overload 重载方法 参数列表不同
      */
     public void foo() throws Exception {}
+
+    /**
+     * overload 不能重载方法 重载只认参数列表
+     * override 不能重写方法 重写要返回类型一致
+     */
+    public int foo(int a) {return a;}
 }
