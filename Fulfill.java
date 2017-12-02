@@ -6,6 +6,8 @@ interface C {
 }
 
 class A {
+    public A() {}
+
     public void foo(int a) throws EA {}
 }
 
@@ -14,6 +16,11 @@ class A {
  * ==============
  */
 class B extends A implements C {
+
+    /**
+     * 构造方法不会继承，声明异常，不影响子类
+     */
+    public B() throws Exception {}
 
     /**
      * rewrite interface, class
